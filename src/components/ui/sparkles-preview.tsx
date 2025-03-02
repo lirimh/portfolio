@@ -8,7 +8,6 @@ export function SparklesPreview() {
   const isInView = useInView(ref, {
     once: false,
     amount: 0.3,
-    fallback: true,
   });
 
   return (

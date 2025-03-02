@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { JSX } from "react/jsx-runtime";
 
 export const FloatingNav = ({
   navItems,
@@ -54,7 +55,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem, idx: number) => (
           <button
             key={`link=${idx}`}
             onClick={navItem.onClick}
