@@ -3,23 +3,27 @@
 import Image from "next/image";
 import React, { FC } from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import Link from "next/link";
-import { StaticImageData } from "next/image"; // Import the correct type
+import { StaticImageData } from "next/image";
 
 interface ThreeDCardProps {
-  title?: string;
-  image: StaticImageData; // Update to accept StaticImageData instead of string
+  image: StaticImageData;
 }
-const ThreeDCardDemo: FC<ThreeDCardProps> = ({ image, title }) => {
+
+const ThreeDCardDemo: FC<ThreeDCardProps> = ({ image }) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-none relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl  border  ">
-        <CardItem translateZ="100" className="w-full mt-4">
+      <CardBody className="bg-none relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl border">
+        <CardItem className="w-full">
           <Image
             src={image}
-            height="1000"
-            width="1000"
-            className="h-full w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            height={1000}
+            width={1000}
+            className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+            sizes="(max-width: 640px) 90vw, 
+                   (max-width: 768px) 80vw,
+                   (max-width: 1024px) 60vw,
+                   40vw"
+            priority
             alt="thumbnail"
           />
         </CardItem>
