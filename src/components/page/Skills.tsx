@@ -136,7 +136,7 @@ const Skills = () => {
       <SparklesPreview />
 
       {/* Desktop Layout (Hidden on Mobile and Tablet) */}
-      <div className="hidden lg:block relative w-full h-[700px]">
+      <div className="hidden lg:block  relative w-full h-[700px]">
         {logos.map((logo, index) => (
           <motion.div
             key={index}
@@ -190,7 +190,7 @@ const Skills = () => {
                   height={100}
                   width={100}
                   alt={logo.alt}
-                  className="select-none w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 object-contain"
+                  className="select-none w-16 sm:w-20 md:w-24 h-16  sm:h-20 md:h-24 object-contain"
                 />
               </div>
               <p className="mt-2 text-white text-xs sm:text-sm font-medium md:hidden">

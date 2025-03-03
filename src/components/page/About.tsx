@@ -22,7 +22,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen rounded-md bg-zinc-900 flex flex-col items-center justify-center relative w-full px-4 py-8 md:py-16"
+      className="min-h-screen bg-zinc-900 flex flex-col items-center justify-center relative w-full px-4  md:py-16"
     >
       <ShootingStars />
       <StarsBackground />

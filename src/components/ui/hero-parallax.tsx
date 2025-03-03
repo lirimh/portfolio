@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -53,10 +53,42 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
     useTransform(scrollYProgress, [0, 0.2], [-400, 200]),
     springConfig
   );
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
+
+  useEffect(() => {
+    const updateConstraints = () => {
+      if (containerRef.current) {
+        const container = containerRef.current;
+        const containerWidth = container.offsetWidth;
+        const contentWidth = container.scrollWidth;
+
+        // Calculate the maximum drag distance
+        const maxDrag = contentWidth - containerWidth;
+
+        setDragConstraints({
+          left: -maxDrag - 100, // Add extra space for momentum
+          right: 0,
+        });
+      }
+    };
+
+    // Initial update
+    updateConstraints();
+
+    // Update constraints on window resize
+    window.addEventListener("resize", updateConstraints);
+
+    return () => {
+      window.removeEventListener("resize", updateConstraints);
+    };
+  }, [products]);
+
   return (
     <div
       ref={ref}
-      className="lg:h-[200vh] h-[150vh] md:h-[200vh] lg:pt-0 pt-32 bg-zinc-900  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="lg:h-[230vh] h-[200vh] lg:pt-0 pt-24 bg-zinc-900  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -66,34 +98,63 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
           translateY,
           opacity,
         }}
-        className=""
+        className="relative"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
+        <motion.div
+          ref={containerRef}
+          className="overflow-x-hidden cursor-grab active:cursor-grabbing"
+        >
+          <motion.div
+            drag="x"
+            dragConstraints={dragConstraints}
+            dragElastic={0.05} // Reduced elasticity
+            dragTransition={{
+              bounceStiffness: 300,
+              bounceDamping: 30,
+              power: 0.8,
+            }}
+            className="flex flex-row-reverse space-x-reverse space-x-20 mb-20 select-none"
+          >
+            {firstRow.map((product) => (
+              <ProductCard
+                product={product}
+                translate={translateX}
+                key={product.title}
+              />
+            ))}
+          </motion.div>
+
+          <motion.div
+            drag="x"
+            dragConstraints={dragConstraints}
+            dragElastic={0.1}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+            className="flex flex-row mb-20 space-x-20 select-none"
+          >
+            {secondRow.map((product) => (
+              <ProductCard
+                product={product}
+                translate={translateXReverse}
+                key={product.title}
+              />
+            ))}
+          </motion.div>
+
+          <motion.div
+            drag="x"
+            dragConstraints={dragConstraints}
+            dragElastic={0.1}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+            className="flex flex-row-reverse space-x-reverse space-x-20 select-none"
+          >
+            {thirdRow.map((product) => (
+              <ProductCard
+                product={product}
+                translate={translateX}
+                key={product.title}
+              />
+            ))}
+          </motion.div>
         </motion.div>
       </motion.div>
     </div>
@@ -104,6 +165,17 @@ export const Header = () => {
   return (
     <div className="max-w-7xl bg-zinc-900 relative mx-auto py-10 md:py-20 lg:py-40 px-4 w-full left-0 top-0">
       <div className="flex flex-col md:flex-col lg:flex-row items-center lg:items-start gap-8">
+        {/* Image Section - Top on mobile/tablet, Right on desktop */}
+        <div className="w-full md:w-3/4 lg:w-1/2 order-1 lg:order-2">
+          <Image
+            src="/path-to-your-image.jpg" // Replace with your image path
+            alt="Project Preview"
+            width={600}
+            height={400}
+            className="rounded-lg object-cover w-full"
+          />
+        </div>
+
         {/* Text Content - Bottom on mobile/tablet, Left on desktop */}
         <div className="w-full lg:w-1/2 order-2 lg:order-1">
           <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white text-center lg:text-left">

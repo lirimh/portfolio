@@ -52,7 +52,7 @@ export function FloatingNavDemo() {
   ];
 
   return (
-    <div className="fixed top-0 w-full z-50">
+    <div className="fixed top-5 w-full z-50">
       {/* Desktop Navigation */}
       <div className="hidden md:block">
         <FloatingNav navItems={navItems} />

@@ -13,7 +13,7 @@ export function SparklesPreview() {
   return (
     <div
       ref={ref}
-      className="pt-10 w-full bg-zinc-900 flex flex-col items-center justify-center overflow-hidden rounded-md"
+      className="pt-10 w-full pb-5 bg-zinc-900 flex flex-col items-center justify-center overflow-hidden rounded-md"
     >
       {/* Animated Title with Smooth Elevator Door Effect */}
       <motion.div
