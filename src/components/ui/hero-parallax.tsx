@@ -17,6 +17,9 @@ type Product = {
   thumbnail: string | StaticImageData;
 };
 
+const DURATION = 40; // Adjust scroll speed (lower = faster)
+const SCROLL_DISTANCE = 2000; // Adjust scroll distance
+
 export const HeroParallax = ({ products }: { products: Product[] }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -85,10 +88,15 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
     };
   }, [products]);
 
+  // Duplicate the rows for infinite effect
+  // const duplicatedFirstRow = [...firstRow, ...firstRow];
+  // const duplicatedSecondRow = [...secondRow, ...secondRow];
+  // const duplicatedThirdRow = [...thirdRow, ...thirdRow];
+
   return (
     <div
       ref={ref}
-      className="lg:h-[230vh] h-[200vh] lg:pt-0 pt-24 bg-zinc-900  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="lg:h-[230vh] h-[200vh] lg:pt-0 pt-24 bg-zinc-900 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -102,56 +110,147 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
       >
         <motion.div
           ref={containerRef}
-          className="overflow-x-hidden cursor-grab active:cursor-grabbing"
+          className="cursor-grab active:cursor-grabbing overflow-hidden"
         >
+          {/* First Row - Updated to match second row */}
           <motion.div
-            drag="x"
-            dragConstraints={dragConstraints}
-            dragElastic={0.05} // Reduced elasticity
-            dragTransition={{
-              bounceStiffness: 300,
-              bounceDamping: 30,
-              power: 0.8,
+            className="flex flex-row mb-20 space-x-20 select-none relative group"
+            initial={{ x: 0 }}
+            animate={{
+              x: [-SCROLL_DISTANCE, 0],
             }}
-            className="flex flex-row-reverse space-x-reverse space-x-20 mb-20 select-none"
-          >
-            {firstRow.map((product) => (
-              <ProductCard
-                product={product}
-                translate={translateX}
-                key={product.title}
-              />
-            ))}
-          </motion.div>
-
-          <motion.div
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: DURATION,
+                ease: "linear",
+              },
+            }}
             drag="x"
             dragConstraints={dragConstraints}
             dragElastic={0.1}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-            className="flex flex-row mb-20 space-x-20 select-none"
+            dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
+            whileHover={{
+              scale: 0.95,
+            }}
+            onHoverStart={(e) => {
+              const target = e.target as HTMLElement;
+              target.style.animationPlayState = "paused";
+            }}
+            onHoverEnd={(e) => {
+              const target = e.target as HTMLElement;
+              target.style.animationPlayState = "running";
+            }}
+            style={{
+              width: "fit-content",
+              cursor: "grab",
+            }}
           >
-            {secondRow.map((product) => (
+            {/* First set of items */}
+            {firstRow.map((product, idx) => (
               <ProductCard
                 product={product}
                 translate={translateXReverse}
-                key={product.title}
+                key={`first-${product.title}-${idx}`}
+              />
+            ))}
+            {/* Duplicated set for seamless loop */}
+            {firstRow.map((product, idx) => (
+              <ProductCard
+                product={product}
+                translate={translateXReverse}
+                key={`second-${product.title}-${idx}`}
               />
             ))}
           </motion.div>
 
+          {/* Second Row */}
           <motion.div
+            className="flex flex-row mb-20 space-x-20 select-none relative group"
+            initial={{ x: 0 }}
+            animate={{
+              x: [-SCROLL_DISTANCE, 0],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: DURATION,
+                ease: "linear",
+              },
+            }}
             drag="x"
             dragConstraints={dragConstraints}
             dragElastic={0.1}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-            className="flex flex-row-reverse space-x-reverse space-x-20 select-none"
+            dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
+            whileHover={{
+              scale: 0.95,
+            }}
+            onHoverStart={(e) => {
+              const target = e.target as HTMLElement;
+              target.style.animationPlayState = "paused";
+            }}
+            onHoverEnd={(e) => {
+              const target = e.target as HTMLElement;
+              target.style.animationPlayState = "running";
+            }}
+            style={{
+              width: "fit-content",
+              cursor: "grab",
+            }}
           >
-            {thirdRow.map((product) => (
+            {/* First set of items */}
+            {secondRow.map((product, idx) => (
+              <ProductCard
+                product={product}
+                translate={translateXReverse}
+                key={`first-${product.title}-${idx}`}
+              />
+            ))}
+            {/* Duplicated set for seamless loop */}
+            {secondRow.map((product, idx) => (
+              <ProductCard
+                product={product}
+                translate={translateXReverse}
+                key={`second-${product.title}-${idx}`}
+              />
+            ))}
+          </motion.div>
+
+          {/* Third Row */}
+          <motion.div
+            className="flex flex-row-reverse space-x-reverse space-x-20 select-none relative"
+            initial={{ x: 0 }}
+            animate={{
+              x: [-SCROLL_DISTANCE, 0],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: DURATION,
+                ease: "linear",
+              },
+            }}
+            style={{
+              width: "fit-content", // This ensures proper content width
+            }}
+          >
+            {/* First set of items */}
+            {thirdRow.map((product, idx) => (
               <ProductCard
                 product={product}
                 translate={translateX}
-                key={product.title}
+                key={`first-${product.title}-${idx}`}
+              />
+            ))}
+            {/* Duplicated set for seamless loop */}
+            {thirdRow.map((product, idx) => (
+              <ProductCard
+                product={product}
+                translate={translateX}
+                key={`second-${product.title}-${idx}`}
               />
             ))}
           </motion.div>

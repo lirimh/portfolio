@@ -54,4 +54,24 @@ h-screen {
     -o-user-drag: none;
     user-drag: none;
   }
+  .pause-animation {
+    animation-play-state: paused !important;
+  }
+
+  .grabbing {
+    cursor: grabbing !important;
+  }
+
+  .infinite-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
