@@ -165,17 +165,6 @@ export const Header = () => {
   return (
     <div className="max-w-7xl bg-zinc-900 relative mx-auto py-10 md:py-20 lg:py-40 px-4 w-full left-0 top-0">
       <div className="flex flex-col md:flex-col lg:flex-row items-center lg:items-start gap-8">
-        {/* Image Section - Top on mobile/tablet, Right on desktop */}
-        <div className="w-full md:w-3/4 lg:w-1/2 order-1 lg:order-2">
-          <Image
-            src="/path-to-your-image.jpg" // Replace with your image path
-            alt="Project Preview"
-            width={600}
-            height={400}
-            className="rounded-lg object-cover w-full"
-          />
-        </div>
-
         {/* Text Content - Bottom on mobile/tablet, Left on desktop */}
         <div className="w-full lg:w-1/2 order-2 lg:order-1">
           <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white text-center lg:text-left">
