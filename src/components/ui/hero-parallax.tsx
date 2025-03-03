@@ -96,7 +96,7 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
   return (
     <div
       ref={ref}
-      className="lg:h-[230vh] h-[200vh] lg:pt-0 pt-24 bg-zinc-900 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="lg:h-[200vh] h-[150vh] lg:pt-0 pt-24 bg-zinc-900 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div

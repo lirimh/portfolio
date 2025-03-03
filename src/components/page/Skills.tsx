@@ -131,12 +131,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative bg-zinc-900 min-h-screen py-10 overflow-hidden"
+      className="relative bg-zinc-900 min-h-screen  overflow-hidden"
     >
       <SparklesPreview />
 
       {/* Desktop Layout (Hidden on Mobile and Tablet) */}
-      <div className="hidden lg:block  relative w-full h-[700px]">
+      <div className="hidden lg:block  relative w-full h-[500px]">
         {logos.map((logo, index) => (
           <motion.div
             key={index}

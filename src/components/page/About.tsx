@@ -49,21 +49,28 @@ const About = () => {
         </div>
 
         {/* Text Container - Bottom on tablet, Left on desktop */}
-        <div className="w-full lg:w-3/5 order-2 lg:order-1 text-center md:text-center lg:text-left">
+        <div className="w-full lg:w-3/5 order-2 lg:order-1 text-center">
           <div className="mb-6">
             <TypewriterEffect words={words} />
           </div>
-          <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed max-w-prose mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed max-w-prose mx-auto text-center">
             I am Lirim Hyseni, 28 years old from Presheve, a small city in
-            Serbia. I graduated in 2019 with a Bachelor&apos;s degree in
-            Computer Science. That same year, I started an internship at
-            Blackstone EIT for four months, which led to a full-time position as
-            a Junior Front-End Developer. I gained extensive experience working
-            on web development and web design projects alongside a great team.
-            In addition to my full-time role, I also worked as a freelance
-            developer, completing various projects for small companies. I am
-            always eager to learn new technologies and take on new challenges!
-            😊
+            Serbia. I graduated in 2018 with a Bachelor&apos;s degree in
+            Computer Science from the University for Business and Technology in
+            Prishtina. My career began in early 2019 with an internship at
+            Blackstone EIT, which quickly turned into a full-time position as a
+            Front-End Developer. There, I gained valuable experience working on
+            various web development projects and collaborating closely with a
+            talented team. Afterwards, I continued my journey as a Front-End and
+            WordPress Developer at CNW GmbH, where I was responsible for
+            creating and maintaining websites for different businesses. Since
+            2023, I have been working at Innovative Solutions, contributing to
+            the development of e-commerce platforms and ERP systems, helping
+            deliver high-quality solutions for clients. Alongside my full-time
+            roles, I have also worked as a freelance developer, successfully
+            completing a range of projects for small companies. I&apos;m
+            passionate about continuous learning, improving my skills, and
+            taking on new challenges! 😊
           </p>
         </div>
       </motion.div>
