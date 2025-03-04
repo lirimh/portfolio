@@ -8,7 +8,6 @@ import BlackstoneInternshipSecond from "../../../public/images/work-9.jpg";
 import Blackstone from "../../../public/images/work-7.jpg";
 import BlackstoneSecond from "../../../public/images/work-8.jpg";
 import BlackstoneThird from "../../../public/images/work-2.jpg";
-// import Inno from "../../../public/images/work-1.jpg";
 import InnoSecond from "../../../public/images/work-4.jpg";
 import InnoThird from "../../../public/images/work-5.jpg";
 import InnoImage from "../../../public/images/work-6.jpg";
@@ -27,8 +26,8 @@ export function TimelineDemo() {
             <Image
               src={DegreePhoto}
               alt="startup template"
-              width={300}
-              height={200}
+              width={500}
+              height={500}
               className="rounded-lg object-cover h-40 md:h-44 lg:h-80 w-full max-w-72 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
@@ -36,7 +35,7 @@ export function TimelineDemo() {
               alt="startup template"
               width={500}
               height={500}
-              className="rounded-lg object-cover object-center h-40 md:h-44 lg:h-80 w-full max-w-72 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="rounded-lg object-cover object-center h-40 md:h-44 lg:h-80 w-full lg:max-w-72 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>
@@ -104,7 +103,7 @@ export function TimelineDemo() {
                 alt="feature template"
                 width={500}
                 height={500}
-                className="rounded-lg object-cover h-40  md:h-44 lg:h-80 lg:w-full lg:max-w-72 max-w-36 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                className="rounded-lg object-cover h-40  md:h-44 lg:h-80 lg:w-full lg:max-w-72 max-w-32 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
               />
             </div>
           </div>
