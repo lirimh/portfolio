@@ -51,77 +51,77 @@ const logos = [
   {
     src: Css,
     alt: "CSS",
-    top: "45%",
+    top: "25%", // Changed from 35%
     left: "20%",
     description: "CSS3 for modern web styling and animations",
   },
   {
     src: Html,
     alt: "HTML",
-    top: "30%",
+    top: "10%", // Changed from 20%
     left: "29%",
     description: "HTML5 for semantic markup and web structure",
   },
   {
     src: Javascript,
     alt: "JavaScript",
-    top: "45%",
+    top: "25%", // Changed from 35%
     left: "39%",
     description: "JavaScript for dynamic web functionality",
   },
   {
     src: TypeScript,
     alt: "TypeScript",
-    top: "30%",
+    top: "10%", // Changed from 20%
     left: "49%",
     description: "TypeScript for type-safe JavaScript development",
   },
   {
     src: ReactJs,
     alt: "ReactJs",
-    top: "45%",
+    top: "25%", // Changed from 35%
     left: "58%",
     description: "React.js for building interactive UIs",
   },
   {
     src: Next,
     alt: "Next.js",
-    top: "24%",
+    top: "10%", // Changed from 15%
     left: "68%",
     description: "Next.js for server-side rendering and static generation",
   },
   {
     src: Tailwind,
     alt: "Tailwind",
-    top: "45%",
+    top: "25%", // Changed from 35%
     left: "76%",
     description: "Tailwind CSS for utility-first styling",
   },
   {
     src: Sass,
     alt: "Sass",
-    top: "75%",
+    top: "55%", // Changed from 65%
     left: "30%",
     description: "Sass for advanced CSS preprocessing",
   },
   {
     src: Mui,
     alt: "Material UI",
-    top: "85%",
+    top: "65%", // Changed from 75%
     left: "43%",
     description: "Material UI for ready-to-use React components",
   },
   {
     src: Wordpress,
     alt: "WordPress",
-    top: "85%",
+    top: "65%", // Changed from 75%
     left: "56%",
     description: "WordPress for content management systems",
   },
   {
     src: Git,
     alt: "Git",
-    top: "73%",
+    top: "55%", // Changed from 65%
     left: "68%",
     description: "Git for version control and collaboration",
   },
@@ -172,12 +172,12 @@ const Skills = () => {
       </div>
 
       {/* Mobile and Tablet Layout */}
-      <div className="lg:hidden container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
+      <div className="lg:hidden container mx-auto px-4 py-12 sm:py-16">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
           {logos.map((logo, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center group"
+              className="flex flex-col items-center justify-center group relative"
               variants={floatingVariants}
               initial="initial"
               whileInView={["animate", "floating"]}
@@ -190,12 +190,17 @@ const Skills = () => {
                   height={100}
                   width={100}
                   alt={logo.alt}
-                  className="select-none w-16 sm:w-20 md:w-24 h-16  sm:h-20 md:h-24 object-contain"
+                  className="select-none w-16 sm:w-24 md:w-32 h-16 sm:h-24 md:h-32 object-contain"
                 />
               </div>
-              <p className="mt-2 text-white text-xs sm:text-sm font-medium md:hidden">
+              <p className="mt-3 text-white text-sm sm:text-base md:text-lg font-medium">
                 {logo.alt}
               </p>
+              <div className="absolute w-56 sm:w-64 -bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 hidden sm:block">
+                <p className="text-white text-center text-sm sm:text-base bg-zinc-800/90 px-4 py-3 rounded-lg shadow-xl backdrop-blur-sm">
+                  {logo.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

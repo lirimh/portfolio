@@ -96,7 +96,7 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
   return (
     <div
       ref={ref}
-      className="lg:h-[200vh] h-[150vh] lg:pt-0 pt-24 bg-zinc-900 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="pb-80 lg:pt-0 pt-24 bg-zinc-900 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -262,7 +262,7 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl bg-zinc-900 relative mx-auto py-10 md:py-20 lg:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl pt-32 bg-zinc-900 relative mx-auto md:py-20  px-4 w-full left-0 top-0">
       <div className="flex flex-col md:flex-col lg:flex-row items-center lg:items-start gap-8">
         {/* Text Content - Bottom on mobile/tablet, Left on desktop */}
         <div className="w-full lg:w-1/2 order-2 lg:order-1">

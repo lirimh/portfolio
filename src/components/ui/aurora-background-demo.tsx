@@ -27,7 +27,7 @@ export function AuroraBackgroundDemo() {
   };
 
   return (
-    <section id="home">
+    <section id="home" className="min-h-screen">
       <AuroraBackground>
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
@@ -37,27 +37,27 @@ export function AuroraBackgroundDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative flex flex-col gap-4 items-center justify-center"
+          className="relative flex flex-col gap-4 items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
         >
-          <div className="flex-col text-center justify-center items-center">
+          <div className="flex-col text-center justify-center items-center max-w-4xl mx-auto">
             <TextGenerateEffect
-              className="bg-clip-text text-3xl text-center md:text-4xl lg:text-7xl text-transparent drop-shadow-2xl text-white"
+              className="bg-clip-text text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent drop-shadow-2xl text-white font-bold tracking-tight"
               words="Welcome to my Portfolio"
             />
-            <div className="bg-clip-text mt-3 px-10 lg:px-0 text-transparent font-normal drop-shadow-2xl text-md text-center md:text-4xl lg:text-xl bg-gradient-to-b from-white/80 to-white/20">
-              Hi! I’m Lirim Hyseni, a Front End Developer with{" "}
+            <div className="bg-clip-text mt-4 sm:mt-6 text-transparent font-normal drop-shadow-2xl text-base xs:text-lg sm:text-xl md:text-2xl lg:text-xl bg-gradient-to-b from-white/80 to-white/20 max-w-3xl mx-auto px-4">
+              Hi! I&apos;m Lirim Hyseni, a Front End Developer with{" "}
               <FlipWords words={words} /> based in Presheve.
             </div>
-            <div className="gap-5 flex justify-center py-3">
+            <div className="gap-4 flex flex-row justify-center py-6 sm:py-8 lg:py-2 mt-4 sm:mt-6">
               <Button
                 onClick={scrollToContact}
-                className="mt-3 border px-10 py-5 rounded-full border-white bg-transparent text-white hover:scale-105 hover:bg-white/10 transition-transform duration-300 ease-in-out"
+                className="w-[160px] xs:w-[180px] sm:w-auto px-4 xs:px-6 sm:px-10 lg:text-base lg:px-10 lg:py-5 py-3 xs:py-4 sm:py-6 text-sm xs:text-base sm:text-xl rounded-full border-2 border-white bg-transparent text-white hover:scale-105 hover:bg-white/10 transition-all duration-300 ease-in-out font-medium"
               >
                 Get in touch
               </Button>
               <Button
                 onClick={handleDownloadCV}
-                className="mt-3 border px-10 py-5 rounded-full border-white bg-transparent text-white hover:scale-105 hover:bg-white/10 transition-transform duration-300 ease-in-out"
+                className="w-[160px] xs:w-[180px] sm:w-auto px-4 xs:px-6 sm:px-10 lg:text-base lg:px-10 lg:py-5 py-3 xs:py-4 sm:py-6 text-sm xs:text-base sm:text-xl rounded-full border-2 border-white bg-transparent text-white hover:scale-105 hover:bg-white/10 transition-all duration-300 ease-in-out font-medium"
               >
                 Download CV
               </Button>

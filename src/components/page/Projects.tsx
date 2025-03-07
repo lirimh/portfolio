@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
+import { StaticImageData } from "next/image";
 import MorelErp from "../../../public/images/morel-erp.jpg";
 import MorelShop from "../../../public/images/morel-shop.png";
 import Pygmalion from "../../../public/images/pygmalion.png";
@@ -9,28 +10,30 @@ import Blackstone from "../../../public/images/blackstone.png";
 import CNWSolutions from "../../../public/images/cnw-solutions.png";
 import CNWGmbh from "../../../public/images/cnw.png";
 
-export function Projects() {
-  return (
-    <section id="projects">
-      <HeroParallax products={products} />
-    </section>
-  );
-}
+type Project = {
+  title: string;
+  description: string;
+  link: string;
+  thumbnail: StaticImageData;
+  technologies?: string[];
+};
 
-export const products = [
+const projects: Project[] = [
   {
     title: "Pygmalion Webshop",
     description:
       "Created a home decor e-commerce platform with React.js, React Query, and Material UI, integrating user authentication, product listings, blog features, and Stripe payments.",
     link: "#",
     thumbnail: Pygmalion,
+    technologies: ["React.js", "React Query", "Material UI", "Stripe"],
   },
   {
     title: "Morel Webshop",
     description:
-      " Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
+      "Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
     link: "#",
     thumbnail: MorelShop,
+    technologies: ["Next.js", "Tailwind CSS", "Stripe"],
   },
   {
     title: "Morel ERP",
@@ -49,7 +52,7 @@ export const products = [
   {
     title: "Blackstone Website",
     description:
-      " Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
+      "Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
     link: "#",
     thumbnail: Blackstone,
   },
@@ -70,7 +73,7 @@ export const products = [
   {
     title: "Blackstone Website",
     description:
-      " Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
+      "Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
     link: "#",
     thumbnail: Blackstone,
   },
@@ -84,8 +87,21 @@ export const products = [
   {
     title: "Morel Webshop",
     description:
-      " Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
+      "Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
     link: "#",
     thumbnail: MorelShop,
   },
 ];
+
+export function Projects() {
+  return (
+    <section
+      id="projects"
+      className="relative w-full bg-zinc-900 overflow-hidden"
+    >
+      <HeroParallax products={projects} />
+    </section>
+  );
+}
+
+export { projects };

@@ -13,15 +13,15 @@ const ThreeDCardDemo: FC<ThreeDCardProps> = ({ image }) => {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-none relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl border">
-        <CardItem className="w-full">
+        <CardItem className="w-full h-full">
           <Image
             src={image}
-            height={1000}
-            width={1000}
+            height={1200}
+            width={1200}
             className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
             sizes="(max-width: 640px) 90vw, 
                    (max-width: 768px) 80vw,
-                   (max-width: 1024px) 60vw,
+                   (max-width: 1024px) 80vw,
                    40vw"
             priority
             alt="thumbnail"
