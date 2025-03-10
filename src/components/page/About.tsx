@@ -53,14 +53,14 @@ const About = () => {
           </div>
           <div className="space-y-4 sm:space-y-6">
             <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-              I am Lirim Hyseni, 28 years old from Presheve, a small city in
-              Serbia. I graduated in 2018 with a Bachelor&apos;s degree in
-              Computer Science from the University for Business and Technology
-              in Prishtina. My career began in early 2019 with an internship at
-              Blackstone EIT, which quickly turned into a full-time position as
-              a Front-End Developer. There, I gained valuable experience working
-              on various web development projects and collaborating closely with
-              a talented team.
+              I am Lirim Hyseni, 28 years old born in Presheve. I graduated in
+              2018 with a Bachelor&apos;s degree in Computer Science from the
+              University for Business and Technology in Prishtina. My career
+              began in early 2019 with an internship at Blackstone EIT, which
+              quickly turned into a full-time position as a Front-End Developer.
+              There, I gained valuable experience working on various web
+              development projects and collaborating closely with a talented
+              team.
             </p>
             <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
               Afterwards, I continued my journey as a Front-End and WordPress
