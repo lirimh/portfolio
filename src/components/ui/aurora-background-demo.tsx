@@ -45,8 +45,8 @@ export function AuroraBackgroundDemo() {
               words="Welcome to my Portfolio"
             />
             <div className="bg-clip-text mt-4 sm:mt-6 text-transparent font-normal drop-shadow-2xl text-base xs:text-lg sm:text-xl md:text-2xl lg:text-xl bg-gradient-to-b from-white/80 to-white/20 max-w-3xl mx-auto px-4">
-              Hi! I&apos;m Lirim Hyseni, a Front End Developer with{" "}
-              <FlipWords words={words} />
+              Hi! I&apos;m Lirim Hyseni, a Front End Developer with experience
+              in <FlipWords words={words} />
             </div>
             <div className="gap-4 flex flex-row justify-center py-6 sm:py-8 lg:py-2 mt-4 sm:mt-6">
               <Button
