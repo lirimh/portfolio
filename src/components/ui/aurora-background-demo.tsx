@@ -10,13 +10,32 @@ import { Button } from "./button";
 export function AuroraBackgroundDemo() {
   const words = ["React", "Next Js", "Wordpress"];
 
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "Lirim_Hyseni_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownloadCV = async () => {
+    try {
+      // Check if file exists first
+      const response = await fetch("/Final-CV.pdf");
+      if (!response.ok) {
+        console.error("CV file not found");
+        return;
+      }
+
+      // Create blob from the PDF file
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Final-CV.pdf"; // Updated filename
+
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+
+      // Cleanup
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error downloading CV:", error);
+    }
   };
 
   const scrollToContact = () => {
