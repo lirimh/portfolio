@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./button";
 import { TextArea } from "./text-area";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,6 @@ export function ContactForm() {
     description: "",
   });
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
   const handleChange = (
@@ -31,7 +31,6 @@ export function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setError("");
-    setSuccess(false);
 
     try {
       await emailjs.send(
@@ -46,7 +45,11 @@ export function ContactForm() {
         "4HArWtdMCo2MJt4xz" // Replace with your Public Key
       );
 
-      setSuccess(true);
+      toast.success("Message sent successfully!", {
+        description: "Thank you for reaching out. I'll get back to you soon.",
+        duration: 5000,
+      });
+
       setFormData({
         firstname: "",
         lastname: "",
@@ -62,11 +65,6 @@ export function ContactForm() {
 
   return (
     <div className="max-w-3xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-zinc-900 dark:bg-zinc-900">
-      {success && (
-        <div className="mb-4 p-4 bg-green-500/20 text-green-500 rounded-lg">
-          Message sent successfully!
-        </div>
-      )}
       {error && (
         <div className="mb-4 p-4 bg-red-500/20 text-red-500 rounded-lg">
           {error}
