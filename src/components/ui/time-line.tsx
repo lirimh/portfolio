@@ -24,6 +24,7 @@ export function TimelineDemo() {
           </p>
           <div className="grid lg:grid-cols-3 grid-cols-2 gap-4">
             <Image
+              loading="lazy"
               src={DegreePhoto}
               alt="startup template"
               width={500}
@@ -31,6 +32,7 @@ export function TimelineDemo() {
               className="rounded-lg object-cover h-40 md:h-44 lg:h-80 w-full max-w-32  lg:max-w-72 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
+              loading="lazy"
               src={DegreePhotoImg}
               alt="startup template"
               width={500}
@@ -52,6 +54,7 @@ export function TimelineDemo() {
 
           <div className="grid grid-cols-2 gap-4">
             <Image
+              loading="lazy"
               src={BlackstoneInternship}
               alt="hero template"
               width={500}
@@ -59,6 +62,7 @@ export function TimelineDemo() {
               className="rounded-lg object-cover h-28 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
+              loading="lazy"
               src={BlackstoneInternshipSecond}
               alt="feature template"
               width={500}
@@ -81,6 +85,7 @@ export function TimelineDemo() {
             {/* Top row with 2 images */}
             <div className="grid grid-cols-2 gap-4">
               <Image
+                loading="lazy"
                 src={Blackstone}
                 alt="hero template"
                 width={500}
@@ -88,6 +93,7 @@ export function TimelineDemo() {
                 className="rounded-lg object-cover h-28 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
               />
               <Image
+                loading="lazy"
                 src={BlackstoneThird}
                 alt="bento template"
                 width={500}
@@ -99,6 +105,7 @@ export function TimelineDemo() {
             {/* Bottom centered image */}
             <div className="flex justify-center">
               <Image
+                loading="lazy"
                 src={BlackstoneSecond}
                 alt="feature template"
                 width={500}
@@ -120,6 +127,7 @@ export function TimelineDemo() {
 
           <div className="grid grid-cols-2 gap-4">
             <Image
+              loading="lazy"
               src={InnoSecond}
               alt="feature template"
               width={500}
@@ -127,6 +135,7 @@ export function TimelineDemo() {
               className="rounded-lg object-cover h-28 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
+              loading="lazy"
               src={InnoThird}
               alt="bento template"
               width={500}
@@ -134,6 +143,7 @@ export function TimelineDemo() {
               className="rounded-lg object-cover object-bottom h-28 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
+              loading="lazy"
               src={InnoImage}
               alt="bento template"
               width={500}

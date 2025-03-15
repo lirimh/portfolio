@@ -15,6 +15,7 @@ const ThreeDCardDemo: FC<ThreeDCardProps> = ({ image }) => {
       <CardBody className="bg-none relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl border">
         <CardItem className="w-full h-full">
           <Image
+            loading="lazy"
             src={image}
             height={1200}
             width={1200}

@@ -153,6 +153,7 @@ const Skills = () => {
             custom={index}
           >
             <Image
+              loading="lazy"
               src={logo.src}
               height={120}
               width={120}
@@ -186,6 +187,7 @@ const Skills = () => {
             >
               <div className="relative">
                 <Image
+                  loading="lazy"
                   src={logo.src}
                   height={100}
                   width={100}
