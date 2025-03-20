@@ -5,6 +5,7 @@ import { FloatingNavDemo } from "@/components/molecules/Navbar";
 import Footer from "@/components/page/Footer";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <FloatingNavDemo />
         {children}
         <Analytics />
+        <SpeedInsights />
         <Footer />
         <Toaster position="top-center" theme="dark" closeButton richColors />
       </body>
