@@ -13,7 +13,7 @@ export function AuroraBackgroundDemo() {
   const handleDownloadCV = async () => {
     try {
       // Check if file exists first
-      const response = await fetch("/Final-CV.pdf");
+      const response = await fetch("/updated-cv.pdf");
       if (!response.ok) {
         console.error("CV file not found");
         return;
@@ -24,7 +24,7 @@ export function AuroraBackgroundDemo() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Final-CV.pdf"; // Updated filename
+      link.download = "updated-cv.pdf"; // Updated filename
 
       // Trigger download
       document.body.appendChild(link);
