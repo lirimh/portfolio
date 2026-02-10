@@ -24,7 +24,7 @@ const projects: Project[] = [
   {
     title: "Threecolts Blog",
     description:
-      "Developed and maintained the Threecolts blog on WordPress with custom features and theme customizations. Managed core, theme, and plugin updates for stability and security. Implemented SEO best practices including on-page optimization, metadata, clean URLs, and schema markup. Improved UI/UX and responsive design for consistent branding across devices.",
+      "Developed and maintained the Threecolts Blog on WordPress with custom features and theme customizations. Managed core, theme, and plugin updates for stability and security. Implemented SEO best practices including on-page optimization, metadata, clean URLs, and schema markup. Improved UI/UX and responsive design for consistent branding across devices.",
     link: "#",
     thumbnail: ThreecoltsBlog,
     technologies: ["WordPress", "SCSS", "ACF"],
