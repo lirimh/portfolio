@@ -11,6 +11,10 @@ import BlackstoneThird from "../../../public/images/work-2.jpg";
 import InnoSecond from "../../../public/images/work-4.jpg";
 import InnoThird from "../../../public/images/work-5.jpg";
 import InnoImage from "../../../public/images/work-6.jpg";
+import CnwImage from "../../../public/images/work-1.jpg";
+
+const FREELANCE_IMAGE =
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80";
 
 export function TimelineDemo() {
   const data = [
@@ -118,6 +122,27 @@ export function TimelineDemo() {
       ),
     },
     {
+      title: "2021",
+      content: (
+        <div>
+          <p className="text-white lg:text-lg dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Worked as Freelance Developer at CNW GmbH
+          </p>
+
+          <div className="flex justify-start">
+            <Image
+              loading="lazy"
+              src={CnwImage}
+              alt="CNW GmbH"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-40 md:h-44 lg:h-80 lg:w-full lg:max-w-72 max-w-32 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "2022",
       content: (
         <div>
@@ -149,6 +174,27 @@ export function TimelineDemo() {
               width={500}
               height={500}
               className="rounded-lg object-cover object-center h-28 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-white lg:text-lg dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Working as Freelance Front End Developer Contractor
+          </p>
+
+          <div className="flex justify-start">
+            <Image
+              loading="lazy"
+              src={FREELANCE_IMAGE}
+              alt="Freelance work - remote development"
+              width={800}
+              height={500}
+              className="rounded-lg object-cover h-40 md:h-44 lg:h-80 lg:w-full lg:max-w-72 max-w-32 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>

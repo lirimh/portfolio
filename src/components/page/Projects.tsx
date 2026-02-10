@@ -9,6 +9,8 @@ import PygmalionErp from "../../../public/images/pygmalion-erp.png";
 import Blackstone from "../../../public/images/blackstone.png";
 import CNWSolutions from "../../../public/images/cnw-solutions.png";
 import CNWGmbh from "../../../public/images/cnw.png";
+import ThreecoltsBlog from "../../../public/images/threecolts-blog.png";
+import ThreecoltsPage from "../../../public/images/threecolt-page.png";
 
 type Project = {
   title: string;
@@ -19,6 +21,22 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+    title: "Threecolts Blog",
+    description:
+      "Developed and maintained the Threecolts blog on WordPress with custom features and theme customizations. Managed core, theme, and plugin updates for stability and security. Implemented SEO best practices including on-page optimization, metadata, clean URLs, and schema markup. Improved UI/UX and responsive design for consistent branding across devices.",
+    link: "#",
+    thumbnail: ThreecoltsBlog,
+    technologies: ["WordPress", "SCSS", "ACF"],
+  },
+  {
+    title: "Threecolts Website",
+    description:
+      "Redesigned and expanded the Threecolts company website with SvelteKit and Tailwind CSS. Built new pages and reusable UI components with a focus on consistent branding. Improved UI/UX and responsive design for a smooth experience on all devices.",
+    link: "#",
+    thumbnail: ThreecoltsPage,
+    technologies: ["SvelteKit", "Tailwind CSS"],
+  },
   {
     title: "Pygmalion Webshop",
     description:

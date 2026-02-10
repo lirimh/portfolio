@@ -14,6 +14,15 @@ const Footer = () => {
     }
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Cv-New.pdf";
+    link.download = "Lirim-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer className="bg-zinc-900 text-gray-300 py-12 border-t border-zinc-800">
       <ArrowTop />
@@ -81,6 +90,14 @@ const Footer = () => {
                   className="text-sm hover:text-white transition-colors"
                 >
                   Contact
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={handleDownloadCV}
+                  className="text-sm hover:text-white transition-colors cursor-pointer"
+                >
+                  Download CV
                 </button>
               </li>
             </ul>

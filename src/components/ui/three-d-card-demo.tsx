@@ -24,7 +24,6 @@ const ThreeDCardDemo: FC<ThreeDCardProps> = ({ image }) => {
                    (max-width: 768px) 80vw,
                    (max-width: 1024px) 80vw,
                    40vw"
-            priority
             alt="thumbnail"
           />
         </CardItem>

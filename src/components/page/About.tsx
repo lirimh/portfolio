@@ -71,7 +71,7 @@ const About = () => {
               deliver high-quality solutions for clients.
             </p>
             <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-              Alongside my full-time roles, I have also worked as a freelance
+              Besides my other work, I also work as a freelance front end
               developer, successfully completing a range of projects for small
               companies. I&apos;m passionate about continuous learning,
               improving my skills, and taking on new challenges! 😊
