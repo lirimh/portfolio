@@ -87,3 +87,4 @@ main>.site-header{position:fixed;inset:0 0 auto;z-index:30;height:76px;padding:1
 .stack-item,.stack-float-group{cursor:default}
 .preview-transition{display:grid}.preview-transition>div{grid-area:1/1;min-width:0}
 .project-row,.project-row *{cursor:pointer}
+.contact-section footer .footer-brand{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;flex:none}.contact-section footer .footer-brand img{width:38px;height:38px;object-fit:contain}.contact-section footer .footer-brand:hover{opacity:.7}
