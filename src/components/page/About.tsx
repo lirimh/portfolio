@@ -52,29 +52,14 @@ const About = () => {
             <TypewriterEffect words={words} />
           </div>
           <div className="space-y-4 sm:space-y-6">
-            <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-              I am Lirim Hyseni, 28 years old born in Presheve. I graduated in
-              2018 with a Bachelor&apos;s degree in Computer Science from the
-              University for Business and Technology in Prishtina. My career
-              began in early 2019 with an internship at Blackstone EIT, which
-              quickly turned into a full-time position as a Front-End Developer.
-              There, I gained valuable experience working on various web
-              development projects and collaborating closely with a talented
-              team.
+            <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
+              I&apos;m Lirim Hyseni, a front-end developer with a bachelor&apos;s degree in Computer Science and Engineering from the University for Business and Technology. I build responsive, user-friendly experiences for the web and mobile.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-              Afterwards, I continued my journey as a Front-End and WordPress
-              Developer at CNW GmbH, where I was responsible for creating and
-              maintaining websites for different businesses. Since 2023, I have
-              been working at Innovative Solutions, contributing to the
-              development of e-commerce platforms and ERP systems, helping
-              deliver high-quality solutions for clients.
+            <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
+              My experience spans company websites, e-commerce, ERP systems and mobile learning apps. I&apos;ve worked with Blackstone Eit, CNW GmbH, Innovative Solution and Threecolts, as well as on freelance projects.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-lg text-white/90 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
-              Besides my other work, I also work as a freelance front end
-              developer, successfully completing a range of projects for small
-              companies. I&apos;m passionate about continuous learning,
-              improving my skills, and taking on new challenges! 😊
+            <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
+              I work with React, React Native, Next.js, SvelteKit and WordPress, and enjoy turning complex requirements into clear, practical interfaces.
             </p>
           </div>
         </div>
@@ -84,3 +69,4 @@ const About = () => {
 };
 
 export default About;
+

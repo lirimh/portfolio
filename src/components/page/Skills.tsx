@@ -134,6 +134,7 @@ const Skills = () => {
       className="relative bg-zinc-900 min-h-screen  overflow-hidden"
     >
       <SparklesPreview />
+      <p className="mx-auto max-w-3xl px-6 text-center text-zinc-300 leading-relaxed">Also experienced with React Native, Expo, SvelteKit, REST APIs, Zustand, Redux, React Query, Shadcn and Bootstrap.</p>
 
       {/* Desktop Layout (Hidden on Mobile and Tablet) */}
       <div className="hidden lg:block  relative w-full h-[500px]">
@@ -212,3 +213,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

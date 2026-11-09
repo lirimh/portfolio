@@ -1,125 +1,34 @@
-"use client";
-import React from "react";
-import { HeroParallax } from "../ui/hero-parallax";
-import { StaticImageData } from "next/image";
-import MorelErp from "../../../public/images/morel-erp.jpg";
-import MorelShop from "../../../public/images/morel-shop.png";
-import Pygmalion from "../../../public/images/pygmalion.png";
-import PygmalionErp from "../../../public/images/pygmalion-erp.png";
-import Blackstone from "../../../public/images/blackstone.png";
-import CNWSolutions from "../../../public/images/cnw-solutions.png";
-import CNWGmbh from "../../../public/images/cnw.png";
+import Image from "next/image";
 import ThreecoltsBlog from "../../../public/images/threecolts-blog.png";
 import ThreecoltsPage from "../../../public/images/threecolt-page.png";
+import MorelShop from "../../../public/images/morel-shop.png";
+import Pygmalion from "../../../public/images/pygmalion.png";
+import CNW from "../../../public/images/cnw.png";
 
-type Project = {
-  title: string;
-  description: string;
-  link: string;
-  thumbnail: StaticImageData;
-  technologies?: string[];
-};
-
-const projects: Project[] = [
-  {
-    title: "Threecolts Blog",
-    description:
-      "Developed and maintained the Threecolts Blog on WordPress with custom features and theme customizations. Managed core, theme, and plugin updates for stability and security. Implemented SEO best practices including on-page optimization, metadata, clean URLs, and schema markup. Improved UI/UX and responsive design for consistent branding across devices.",
-    link: "#",
-    thumbnail: ThreecoltsBlog,
-    technologies: ["WordPress", "SCSS", "ACF"],
-  },
-  {
-    title: "Threecolts Website",
-    description:
-      "Redesigned and expanded the Threecolts company website with SvelteKit and Tailwind CSS. Built new pages and reusable UI components with a focus on consistent branding. Improved UI/UX and responsive design for a smooth experience on all devices.",
-    link: "#",
-    thumbnail: ThreecoltsPage,
-    technologies: ["SvelteKit", "Tailwind CSS"],
-  },
-  {
-    title: "Pygmalion Webshop",
-    description:
-      "Created a home decor e-commerce platform with React.js, React Query, and Material UI, integrating user authentication, product listings, blog features, and Stripe payments.",
-    link: "#",
-    thumbnail: Pygmalion,
-    technologies: ["React.js", "React Query", "Material UI", "Stripe"],
-  },
-  {
-    title: "Morel Webshop",
-    description:
-      "Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
-    link: "#",
-    thumbnail: MorelShop,
-    technologies: ["Next.js", "Tailwind CSS", "Stripe"],
-  },
-  {
-    title: "Morel ERP",
-    description:
-      "Built a management dashboard for handling products, blog content, prescriptions, users, and POS using Next.js, React Query, and Zustand, ensuring efficient business operations.",
-    link: "#",
-    thumbnail: MorelErp,
-  },
-  {
-    title: "Pygmalion ERP",
-    description:
-      "Developed an ERP system for managing products, users, and blog content, using React.js, Zustand, and React Query, streamlining business processes.",
-    link: "#",
-    thumbnail: PygmalionErp,
-  },
-  {
-    title: "Blackstone Website",
-    description:
-      "Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
-    link: "#",
-    thumbnail: Blackstone,
-  },
-  {
-    title: "CNW Solutions",
-    description:
-      "Designed and developed a WordPress-based IT services company website using Elementor and ACF, ensuring a professional and responsive layout.",
-    link: "#",
-    thumbnail: CNWSolutions,
-  },
-  {
-    title: "CNW",
-    description:
-      "Designed and developed a WordPress-based IT services company website using Elementor and ACF, ensuring a professional and responsive layout.",
-    link: "#",
-    thumbnail: CNWGmbh,
-  },
-  {
-    title: "Blackstone Website",
-    description:
-      "Redesigned and improved company website modules using HTML, CSS, JavaScript, and Bootstrap, enhancing UI and UX.",
-    link: "#",
-    thumbnail: Blackstone,
-  },
-  {
-    title: "Morel ERP",
-    description:
-      "Built a management dashboard for handling products, blog content, prescriptions, users, and POS using Next.js, React Query, and Zustand, ensuring efficient business operations.",
-    link: "#",
-    thumbnail: MorelErp,
-  },
-  {
-    title: "Morel Webshop",
-    description:
-      "Developed a responsive e-commerce platform for an optical company using Next.js, Tailwind CSS, and Stripe, featuring user authentication, product catalog, blog posts, and a seamless shopping experience.",
-    link: "#",
-    thumbnail: MorelShop,
-  },
+const projects = [
+  { title: "Supara", description: "An offline mobile app for learning Arabic reading, with audio, tracing, quizzes and saved progress for Albanian and German speakers.", technologies: ["React Native", "Expo", "TypeScript", "SQLite"], link: "https://apps.apple.com/us/app/supara/id1485123002", label: "View on the App Store" },
+  { title: "Pro Keramik ERP", description: "A management system for ceramics and materials, products, orders, payments and daily operations.", technologies: ["React", "Shadcn", "Tailwind CSS", "Zustand", "React Query"] },
+  { title: "Motivate PT", description: "New pages and features for a fitness and personal training platform, with improvements to responsiveness, SEO and performance.", technologies: ["WordPress", "Elementor"] },
+  { title: "Luigi Building", description: "A responsive construction company landing page with contact forms, SEO and performance improvements.", technologies: ["WordPress", "Elementor"] },
+  { title: "Threecolts Website", description: "Redesigned and expanded the company website with reusable components, new pages and responsive layouts.", technologies: ["SvelteKit", "Tailwind CSS"], link: "https://www.threecolts.com/", label: "Visit website", image: ThreecoltsPage },
+  { title: "Threecolts Blog", description: "Developed and maintained a WordPress blog, including custom theme features, SEO and content improvements.", technologies: ["WordPress", "SCSS", "ACF"], link: "https://www.threecolts.com/blog/", label: "Visit blog", image: ThreecoltsBlog },
+  { title: "Pygmalion Webshop & ERP", description: "E-commerce and management interfaces for products, users and content, including authentication and Stripe payments.", technologies: ["React", "React Query", "Material UI", "Stripe"], image: Pygmalion },
+  { title: "Morel Webshop & ERP", description: "An optical e-commerce platform and business dashboard for products, prescriptions, users and point of sale.", technologies: ["Next.js", "Tailwind CSS", "Zustand", "React Query"], image: MorelShop },
+  { title: "CNW GmbH", description: "A responsive IT services website with flexible page layouts built for ColNetworks.", technologies: ["WordPress", "Elementor", "ACF"], link: "https://www.cnw-gmbh.de/", label: "Visit website", image: CNW },
 ];
 
 export function Projects() {
-  return (
-    <section
-      id="projects"
-      className="relative w-full bg-zinc-900 overflow-hidden"
-    >
-      <HeroParallax products={projects} />
-    </section>
-  );
+  return <section id="projects" className="bg-zinc-900 px-4 py-24 text-white sm:px-6">
+    <div className="mx-auto max-w-7xl">
+      <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-400">Selected work</p>
+      <h2 className="mt-3 text-4xl font-bold md:text-6xl">Projects</h2>
+      <p className="mt-5 max-w-2xl text-zinc-300">From mobile learning to e-commerce and business tools, here are some of the projects I have worked on.</p>
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => <article key={project.title} className="flex flex-col overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-800/60">
+          {project.image && <div className="relative h-44 overflow-hidden bg-zinc-800"><Image src={project.image} alt={`${project.title} preview`} fill className="object-cover object-top" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" /></div>}
+          <div className="flex flex-1 flex-col p-6"><h3 className="text-xl font-semibold">{project.title}</h3><p className="mt-3 flex-1 leading-relaxed text-zinc-300">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.technologies.map((tech) => <span key={tech} className="rounded-full bg-zinc-700 px-3 py-1 text-xs text-zinc-200">{tech}</span>)}</div>{project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-6 w-fit font-medium text-white underline underline-offset-4 hover:text-zinc-300">{project.label} ↗</a>}</div>
+        </article>)}
+      </div>
+    </div>
+  </section>;
 }
-
-export { projects };
