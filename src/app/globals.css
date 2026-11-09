@@ -91,3 +91,4 @@ main>.site-header{position:fixed;inset:0 0 auto;z-index:30;height:76px;padding:1
 /* Keep mobile decorations and entrance animations inside the viewport. */
 html,body{max-width:100%;overflow-x:hidden}
 @media(max-width:800px){.hero::before{width:100%;max-width:100%;right:0}.about-section,.experience-section{overflow-x:clip}.hero-content,.hero-workspace,.project-browser,.project-list,.project-row-content,.stack-items,.contact-section .wrap{min-width:0;max-width:100%}.contact-section h2{overflow-wrap:anywhere}.workspace-code>div>span{min-width:0}}
+@media(max-width:800px){.hero-watermark{display:none}}
