@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: process.env.NODE_ENV === "development" ? ".next-dev" : ".next-build",
   images: {
     unoptimized: true,
     domains: ["assets.aceternity.com", "images.unsplash.com"],
@@ -18,7 +19,7 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+
 
 // next.config.mjs
 import { withSentryConfig } from "@sentry/nextjs";
