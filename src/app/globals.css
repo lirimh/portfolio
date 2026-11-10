@@ -89,6 +89,19 @@ main>.site-header{position:fixed;inset:0 0 auto;z-index:30;height:76px;padding:1
 .project-row,.project-row *{cursor:pointer}
 .contact-section footer .footer-brand{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;flex:none}.contact-section footer .footer-brand img{width:38px;height:38px;object-fit:contain}.contact-section footer .footer-brand:hover{opacity:.7}
 /* Keep mobile decorations and entrance animations inside the viewport. */
-html,body{max-width:100%;overflow-x:hidden}
+html,body{max-width:100%;overflow-x:clip}
 @media(max-width:800px){.hero::before{width:100%;max-width:100%;right:0}.about-section,.experience-section{overflow-x:clip}.hero-content,.hero-workspace,.project-browser,.project-list,.project-row-content,.stack-items,.contact-section .wrap{min-width:0;max-width:100%}.contact-section h2{overflow-wrap:anywhere}.workspace-code>div>span{min-width:0}}
 @media(max-width:800px){.hero-watermark{display:none}}
+/* Keep the desktop preview sticky and make the mobile sections more compact. */
+@media(max-width:800px){
+  .hero{min-height:0;padding:100px 0 55px}
+  .about-section,.work-section{padding:60px 0}
+  .experience-section{padding:60px 0}
+  .toolbox{padding:0 0 65px}
+  .stack-groups{gap:45px}
+  .about-grid{gap:35px}
+  .experience-list{margin-top:40px}
+  .contact-section{padding-top:50px}
+  .contact-section h2{margin:55px 0 35px}
+  .contact-bottom{padding-bottom:55px}
+}
