@@ -172,3 +172,5 @@ html,body{max-width:100%;overflow-x:clip}
 }
 @media(min-width:1101px){.hero-watermark{left:-48px}}
 @media(min-width:801px) and (prefers-reduced-motion:reduce){.hero-watermark{animation:none!important;opacity:1;transform:translateY(-50%) rotate(180deg)}}
+/* The portrait color is driven directly by scroll progress. */
+.portrait-frame{transition:none}
