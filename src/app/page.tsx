@@ -142,10 +142,11 @@ export default function Home() {
         return distance(row) < distance(best) ? row : best;
       });
       const timeline = closest.closest<HTMLElement>(".experience-list");
-      const marker = closest.querySelector<HTMLElement>(".exp-number");
-      if (timeline && marker) {
-        const markerRect = marker.getBoundingClientRect();
-        timeline.style.setProperty("--timeline-end", `${markerRect.top + markerRect.height / 2 - timeline.getBoundingClientRect().top}px`);
+      const markers = rows.map(row => row.querySelector<HTMLElement>(".exp-number")).filter((marker): marker is HTMLElement => marker !== null);
+      if (timeline && markers.length) {
+        const center = (marker: HTMLElement) => { const rect = marker.getBoundingClientRect(); return rect.top + rect.height / 2; };
+        const position = Math.max(center(markers[0]), Math.min(target, center(markers[markers.length - 1])));
+        timeline.style.setProperty("--timeline-end", `${position - timeline.getBoundingClientRect().top}px`);
       }
       setActiveExperience(Number(closest.dataset.experienceIndex));
     };
