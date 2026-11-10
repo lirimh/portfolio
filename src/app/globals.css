@@ -144,7 +144,7 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:800px){.back-to-top{right:16px;bottom:max(18px,env(safe-area-inset-bottom))}}
 @media(prefers-reduced-motion:reduce){.back-to-top{transition:none}.back-to-top:hover,.back-to-top:focus-visible{transform:none}}
 @media(min-width:801px){
-  .about-section{padding-bottom:55px}
-  .experience-section{padding-top:55px}
+  .about-section{padding-bottom:75px}
+  .experience-section{padding-top:75px}
   .toolbox{padding-top:0}
 }
