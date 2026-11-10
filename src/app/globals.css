@@ -105,3 +105,41 @@ html,body{max-width:100%;overflow-x:clip}
   .contact-section h2{margin:55px 0 35px}
   .contact-bottom{padding-bottom:55px}
 }
+
+/* A compact career timeline with an emphasis on the current role. */
+.experience-list{position:relative;border:0;margin-top:60px}
+.experience-list::before{content:"";position:absolute;left:17px;top:30px;bottom:30px;width:1px;background:linear-gradient(#00ef51 0%,#435047 24%,#353b37 100%)}
+.experience-row,.experience-row:hover{position:relative;display:grid;grid-template-columns:36px 145px minmax(0,1fr) minmax(200px,260px);gap:24px;align-items:center;min-height:112px;margin:0;padding:20px 24px 20px 0;border:0;border-bottom:1px solid #343b35;background:transparent;transition:background .3s}
+.experience-row:hover{background:linear-gradient(90deg,transparent,#00ef510b)}
+.exp-number{position:relative;z-index:1;width:35px;height:35px;display:grid;place-items:center;border:1px solid #48544b;border-radius:50%;background:#1d211e;color:#aab7ab;font-size:10px;letter-spacing:0}
+.experience-list>div:first-child .exp-number{border-color:#00ef51;background:#00ef51;color:#101b13;box-shadow:0 0 22px #00ef5125}
+.exp-date{color:#a9b4aa;letter-spacing:.04em;white-space:nowrap}
+.experience-row h3{font-size:clamp(21px,2vw,28px);font-weight:700;line-height:1.15;color:#f1f2ef;transition:color .3s}
+.exp-role{color:#d0d8ce;font-family:var(--font-geist),Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:0;line-height:1.5}
+.exp-location{display:flex;align-items:center;gap:7px;color:#9aa99d;font-family:var(--font-mono),monospace;font-size:10px;letter-spacing:.02em;margin-top:7px}
+.exp-location::before{content:"";width:5px;height:5px;border-radius:50%;background:#00ef51;flex:none}
+@media(max-width:800px){
+  .experience-list{margin-top:38px}
+  .experience-list::before{left:15px;top:25px;bottom:25px}
+  .experience-row,.experience-row:hover{grid-template-columns:31px minmax(0,1fr);gap:5px 18px;min-height:0;padding:22px 0}
+  .exp-number{grid-column:1;grid-row:1 / 4;width:31px;height:31px;align-self:start}
+  .exp-date{grid-column:2;grid-row:1;font-size:10px}
+  .experience-row h3{grid-column:2;grid-row:2;font-size:22px;margin:4px 0}
+  .exp-role{grid-column:2;grid-row:3;font-size:13px}
+}
+
+/* Keep project showcases the same width whether or not a project has a link. */
+@media(max-width:800px){
+  .project-row:hover,.project-row:focus-within{padding-left:0}
+  .project-number{flex:0 0 42px}
+  .project-row-content{width:0}
+  .project-row h3{padding-right:30px}
+  .project-row .row-link{position:absolute;right:0;top:32px}
+  .mobile-project-image.mobile-showcase{width:100%;aspect-ratio:1}
+  .mobile-showcase .showcase-board,.mobile-showcase .supara-showcase{height:100%}
+}
+.back-to-top{position:fixed;right:24px;bottom:max(24px,env(safe-area-inset-bottom));z-index:35;display:grid;place-items:center;width:48px;height:48px;border:1px solid #526157;border-radius:50%;background:#172019;color:#00ef51;box-shadow:0 8px 24px #0006;transition:background .2s,color .2s,transform .2s}
+.back-to-top:hover,.back-to-top:focus-visible{background:#00ef51;color:#101710;transform:translateY(-3px)}
+.back-to-top:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:800px){.back-to-top{right:16px;bottom:max(18px,env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}.back-to-top:hover,.back-to-top:focus-visible{transform:none}}
