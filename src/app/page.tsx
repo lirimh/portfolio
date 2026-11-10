@@ -109,8 +109,8 @@ function ScrollPortrait() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "center center"] });
-  const reveal = useTransform(scrollYProgress, [0, 1], ["inset(0% 0% 100% 0%)", "inset(0% 0% 0% 0%)"]);
-  return <div ref={ref} className="portrait-frame"><Image src={portrait} alt="Lirim Hyseni" fill sizes="(max-width: 800px) 90vw, 40vw" className="portrait portrait-monochrome"/><motion.div className="portrait-color" aria-hidden="true" style={{ clipPath: reduced ? "inset(0)" : reveal }}><Image src={portrait} alt="" fill sizes="(max-width: 800px) 90vw, 40vw" className="portrait"/></motion.div><div className="portrait-label">A LITTLE ABOUT ME <span>✳</span></div></div>;
+  const filter = useTransform(scrollYProgress, [0, 1], ["grayscale(100%)", "grayscale(0%)"]);
+  return <motion.div ref={ref} className="portrait-frame" style={{ filter: reduced ? "none" : filter }}><Image src={portrait} alt="Lirim Hyseni" fill sizes="(max-width: 800px) 90vw, 40vw" className="portrait"/><div className="portrait-label">A LITTLE ABOUT ME <span>✳</span></div></motion.div>;
 }
 function Reveal({ children, className = "", direction = "up", delay = 0 }: { children: React.ReactNode; className?: string; direction?: "up" | "left" | "right"; delay?: number }) {
   const reduced = useReducedMotion();
