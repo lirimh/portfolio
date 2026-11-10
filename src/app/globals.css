@@ -108,7 +108,9 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* A compact career timeline with an emphasis on the current role. */
 .experience-list{position:relative;border:0;margin-top:60px}
-.experience-list::before{content:"";position:absolute;left:17px;top:30px;bottom:30px;width:1px;background:linear-gradient(#00ef51 0%,#435047 24%,#353b37 100%)}
+.experience-list::before{content:"";position:absolute;left:17px;top:30px;bottom:30px;width:1px;background:#435047}
+.experience-list::after{content:"";position:absolute;left:17px;top:30px;width:1px;height:max(0px,calc(var(--timeline-end,30px) - 30px));background:#00ef51;box-shadow:0 0 10px #00ef5166;transition:height .45s ease;pointer-events:none}
+.experience-list>div{position:relative;z-index:1}
 .experience-row,.experience-row:hover{position:relative;display:grid;grid-template-columns:36px 145px minmax(0,1fr) minmax(200px,260px);gap:24px;align-items:center;min-height:112px;margin:0;padding:20px 24px 20px 0;border:0;border-bottom:1px solid #343b35;background:transparent;transition:background .3s}
 .experience-row:hover{background:linear-gradient(90deg,transparent,#00ef510b)}
 .exp-number{position:relative;z-index:1;width:35px;height:35px;display:grid;place-items:center;border:1px solid #48544b;border-radius:50%;background:#1d211e;color:#aab7ab;font-size:10px;letter-spacing:0}
@@ -121,6 +123,7 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:800px){
   .experience-list{margin-top:38px}
   .experience-list::before{left:15px;top:25px;bottom:25px}
+  .experience-list::after{left:15px;top:25px;height:max(0px,calc(var(--timeline-end,25px) - 25px))}
   .experience-row,.experience-row:hover{grid-template-columns:31px minmax(0,1fr);gap:5px 18px;min-height:0;padding:22px 0}
   .exp-number{grid-column:1;grid-row:1 / 4;width:31px;height:31px;align-self:start}
   .exp-date{grid-column:2;grid-row:1;font-size:10px}
@@ -143,6 +146,7 @@ html,body{max-width:100%;overflow-x:clip}
 .back-to-top:focus-visible{outline:2px solid #fff;outline-offset:3px}
 @media(max-width:800px){.back-to-top{right:16px;bottom:max(18px,env(safe-area-inset-bottom))}}
 @media(prefers-reduced-motion:reduce){.back-to-top{transition:none}.back-to-top:hover,.back-to-top:focus-visible{transform:none}}
+@media(prefers-reduced-motion:reduce){.experience-list::after{transition:none}}
 @media(min-width:801px){
   .about-section{padding-bottom:75px}
   .experience-section{padding-top:75px}

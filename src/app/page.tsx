@@ -141,6 +141,12 @@ export default function Home() {
         };
         return distance(row) < distance(best) ? row : best;
       });
+      const timeline = closest.closest<HTMLElement>(".experience-list");
+      const marker = closest.querySelector<HTMLElement>(".exp-number");
+      if (timeline && marker) {
+        const markerRect = marker.getBoundingClientRect();
+        timeline.style.setProperty("--timeline-end", `${markerRect.top + markerRect.height / 2 - timeline.getBoundingClientRect().top}px`);
+      }
       setActiveExperience(Number(closest.dataset.experienceIndex));
     };
     const schedule = () => { if (!frame) frame = window.requestAnimationFrame(update); };
