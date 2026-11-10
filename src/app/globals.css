@@ -164,3 +164,10 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:540px){.menu-header{padding:18px 22px}.menu-content{padding:36px 22px 28px}.menu-nav a{padding:13px 0;font-size:27px}.menu-bottom{padding-top:38px;gap:18px}.menu-contact .menu-email{font-size:10px}}
 @media(max-width:340px){.menu-bottom{grid-template-columns:1fr;gap:30px}}
 @media(prefers-reduced-motion:reduce){.menu-nav-arrow,.menu-close{transition:none}.menu-nav a:hover .menu-nav-arrow,.menu-nav a:focus-visible .menu-nav-arrow{transform:none}}
+.menu-social a{gap:8px}.menu-social-icon{width:18px;height:18px;flex:none;color:#a9c7b0;transition:color .2s}.menu-social a:hover .menu-social-icon,.menu-social a:focus-visible .menu-social-icon{color:#00ef51}
+@media(min-width:801px){
+  .hero-watermark{top:50%;left:0;right:auto;bottom:auto;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);font-size:clamp(100px,10vw,160px);line-height:1;letter-spacing:-.06em;color:rgba(255,255,255,.035);animation:hero-vertical-name-in 1.2s .25s both}
+  @keyframes hero-vertical-name-in{from{opacity:0;transform:translate(-10px,-50%) rotate(180deg)}to{opacity:1;transform:translate(0,-50%) rotate(180deg)}}
+}
+@media(min-width:1101px){.hero-watermark{left:-48px}}
+@media(min-width:801px) and (prefers-reduced-motion:reduce){.hero-watermark{animation:none!important;opacity:1;transform:translateY(-50%) rotate(180deg)}}
