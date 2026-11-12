@@ -172,3 +172,4 @@ html,body{max-width:100%;overflow-x:clip}
 }
 @media(min-width:1101px){.hero-watermark{left:-48px}}
 @media(min-width:801px) and (prefers-reduced-motion:reduce){.hero-watermark{animation:none!important;opacity:1;transform:translateY(-50%) rotate(180deg)}}
+.little-muslim-showcase{background:radial-gradient(ellipse at 50% 40%,#457d57,#254e36 58%,#173126);color:#f8f2db}
